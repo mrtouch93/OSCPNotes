@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>SMB- 139/445</title>
+</head><body><span style="color: #ff0000">IDENTIFICATION</span><ul><li>nmap -v -p --script=smb* 139,445 192.169.11.0/24</li>
+<li>smbclient -L 172.16.43.183 &#09;&#09;&#09;-&gt; list share</li>
+<li>smbclient \\\\1.2.3.4\\SHARE &nbsp;&#09;&#09;-&gt; connect</li>
+<li>nbtscan -r 192.169.11.0/24</li>
+<li>smbmap -H 192.169.58.111 -&gt; con questo puoi anche fare RCE se open</li>
+<li>smbutil status 192.169.1.28</li>
+</ul>
+<b><br/>
+</b>If READ/WRITE permissions : <ul><li>DIrectory Traversal https://raw.githubusercontent.com/MarkBuffalo/exploits/master/Samba/CVE-2010-0926.c</li>
+</ul>
+<span style="color: #ff0000"><br/>
+</span><span style="color: #ff0000">ENUMERATION</span><ul><li>rpcclient -U "" 192.169.1.126 &nbsp;-&gt; if it's vulnerable to null session I can retrieve a lot of information (enum4linux do it automatically)</li>
+<li>enum4linux -a 192.169.1.135</li>
+</ul>
+<br/>
+Guides:<ul><li>https://hacktips.it/tecniche-enumerazione/</li>
+<li>https://github.com/worawit/MS17-010</li>
+</ul>
+</body></html>

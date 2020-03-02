@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<node>
+<version>6</version>
+<dict>
+  <key>title</key><string>Finger - 79</string>
+  <key>nodeid</key><string>ba62bf04-8895-466a-8d6a-f67b29f43ffc</string>
+  <key>modified_time</key><integer>1583098327</integer>
+  <key>version</key><integer>6</integer>
+  <key>content_type</key><string>text/xhtml+xml</string>
+  <key>created_time</key><integer>1560359862</integer>
+  <key>info_sort_dir</key><integer>1</integer>
+  <key>order</key><integer>4</integer>
+  <key>info_sort</key><string>order</string>
+</dict>
+</node>

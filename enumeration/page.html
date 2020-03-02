@@ -1,0 +1,14 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Enumeration</title>
+</head><body><span style="color: #ff0000">find online host same interface</span><br/>
+sudo arp-scan --interface=tap0 -l<br/>
+<br/>
+<br/>
+<span style="color: #ff0000">BASH Script - simple recon</span><br/>
+range=10.14.1.1/24<br/>
+sudo netdiscover -i tap0 -r $range -P &gt; host.txt; awk '{print $1'} host.txt | grep "192.*" &gt; online.txt<br/>
+cat online.txt<br/>
+while read line; do mkdir $lmkdir $line; cd $line; nmap -sT --top-ports 1000 -sV $line -oN nmap$line-TCP.txt; sudo nmap -sU --top-ports 200 -sV nmap$line-UDP.txt; cd ../; done &lt; online.txt</body></html>

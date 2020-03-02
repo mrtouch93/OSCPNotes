@@ -1,0 +1,13 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>DNS - 53</title>
+</head><body><span style="color: #ff0000">DNS ZONE TRANSFER:<br/>
+</span>Manual:<ul><li>1.host -t ns domain_name | cut -d " " -f4 &nbsp;-&gt; find DNS server</li>
+<li>2.host -l domain_name dns_server &nbsp;-&gt; check if it's vulnerable to Zone Transfer</li>
+</ul>
+Automatic:<ul><li style="list-style-type: none">1. dnsrecon -d domain_name -t axfr</li>
+<li style="list-style-type: none">2. dnsenum domain_name</li>
+</ul>
+</body></html>

